@@ -42,12 +42,12 @@ function calculateRank() {
   const content = document.getElementById("rankDescription");
 
   content.innerHTML = `You have a total of 
-                      <span class="text-green-400">${winsNumberFormatted}</span> 
+                      <span class="text-green-400 font-bold font-mono">${winsNumberFormatted}</span> 
                       wins, against a total of 
-                      <span class="text-red-400">${lossesNumberFormatted}</span>
+                      <span class="text-red-400 font-bold font-mono">${lossesNumberFormatted}</span>
                       losses.<br>This grants you a total of 
-                      <span class="text-blue-400">${rankedAvgFormatted}</span> 
+                      <span class="text-blue-400 font-bold font-mono">${rankedAvgFormatted}</span> 
                       ranked score and places you at rank 
-                      <span class="border border-zinc-800 rounded-2xl bg-slate-800 text-yellow-200 pb-1 px-3 me-1">
+                      <span class="border border-zinc-800 rounded-2xl bg-slate-800 text-yellow-200 font-bold font-mono pb-1 px-3 me-1">
                       ${getRankByWins(rankedAvg)}</span>!`;
 }
