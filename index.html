@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Ranked Matches Calculator</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico" />
+  </head>
+
+  <body class="bg-black h-screen flex">
+    <div class="text-center m-auto max-w-screen-md">
+      <form class="m-5" action="javascript:;" onsubmit="calculateRank()">
+        <div>
+          <p class="text-xl text-white">What is your total number of wins?</p>
+          <input
+            class="border-2 border-violet-800 rounded bg-violet-200 mt-2 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            type="number"
+            min="0"
+            id="winsInput"
+            required
+          />
+        </div>
+
+        <div>
+          <p class="text-xl text-white mt-5">
+            What is your total number of losses?
+          </p>
+          <input
+            class="border-2 border-violet-800 rounded bg-violet-200 mt-2 text-center [appearance:textfield] [&::-webkit-outer-spin-button]:appearance-none [&::-webkit-inner-spin-button]:appearance-none"
+            type="number"
+            min="0"
+            id="lossesInput"
+            required
+          />
+        </div>
+
+        <br />
+
+        <div>
+          <input
+            class="text-white border-2 rounded-xl py-2 px-6 mt-5 hover:cursor-pointer"
+            type="submit"
+            id="calculateButton"
+            value="Calculate Your Rank"
+          />
+        </div>
+
+        <div>
+          <p class="text-white text-2xl mt-10 break-words" id="rankDescription">
+            Submit the total numbers above and calculate your rank!
+          </p>
+        </div>
+      </form>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
